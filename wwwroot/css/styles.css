@@ -1,0 +1,310 @@
+@import url("https://fonts.googleapis.com/css2?family=Skranji:wght@400;700&display=swap");
+
+:root {
+  --lightGreen: rgba(64, 109, 53, 0.9);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background-color: whitesmoke;
+}
+
+header {
+  padding: 20px 50px;
+  display: flex;
+  height: 150px;
+  max-width: 100%;
+  justify-content: space-around;
+  align-items: center;
+  background-color: var(--lightGreen);
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  /*width: 100%;*/
+}
+
+.logo img {
+  z-index: 2;
+  height: 100px;
+  margin: 0 20px;
+}
+
+.logo a {
+  font-family: "Skranji", cursive;
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+}
+
+nav ul {
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  list-style: none;
+}
+
+nav li {
+  padding: 10px 20px;
+}
+
+nav a {
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+  font-size: larger;
+}
+
+nav a:hover {
+  color: rgb(132, 209, 113);
+  text-decoration: none;
+}
+
+main {
+  height: 100%;
+}
+
+footer {
+  background-color: var(--lightGreen);
+  min-height: 50px;
+  margin-top: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+footer p {
+  padding: 0;
+  margin: 0;
+  color: white;
+  font-weight: bold;
+}
+
+/*############ INDEX ############*/
+
+.serviços-index {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-image: url(../images/pet-tosa.jpg);
+  background-origin: border-box;
+  background-repeat: no-repeat;
+  background-position-y: 50%;
+  background-size: cover;
+}
+
+.serviços-index h1 {
+  color: rgb(70, 238, 146);
+  font-weight: bold;
+  margin-bottom: 20px;
+  padding: 0;
+}
+
+.descrição {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.descrição h2 {
+  text-align: center;
+  line-height: 2rem;
+  color: white;
+  margin: 0 200px;
+}
+
+.descrição button {
+  font-size: 2rem;
+  margin: 30px;
+}
+
+.destaque {
+  padding: 0 5px;
+  text-transform: uppercase;
+  background-color: var(--lightGreen);
+  color: white;
+  border-radius: 10px;
+}
+
+/*############ SERVIÇOS ############*/
+
+.titulo {
+  padding: 10px 0;
+  width: auto;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  color: white;
+  background-color: var(--lightGreen);
+  font-weight: bold;
+  text-align: center;
+}
+
+.serviços-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.serviço {
+  height: 30vh;
+  width: 80%;
+  display: flex;
+  padding: 20px;
+  margin: 20px;
+  align-items: center;
+  justify-content: center;
+  background-color: rgb(132, 209, 113);
+  color: white;
+  border-radius: 15px;
+}
+
+.serviço-descrição {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  margin: 20px;
+  padding: 10px;
+  overflow: hidden;
+  background-color: rgb(106, 168, 90);
+  border-radius: 15px;
+}
+
+.serviço-descrição h2{
+  text-decoration: underline;
+  text-align: center;
+}
+
+#vet {
+  width: 100%;
+  height: 100%;
+  background-image: url(../images/serviços-vet.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  border-radius: 15px;
+}
+
+#banho {
+  width: 100%;
+  height: 100%;
+  background-image: url(../images/serviços-banho.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  border-radius: 15px;
+}
+
+
+/*############ CONTATO ############*/
+
+
+.container-mensagem {
+  margin: auto;
+  width: 60%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: large;
+  padding-top: 50px;
+  padding-left: 100px;
+  padding-right: 100px;
+  text-align: center;
+}
+
+/*############ DESIGN RESPONSIVO ############*/
+
+.checkbtn{
+  font-size: 5rem;
+  color: white;
+  float: right;
+  cursor: pointer;
+  display: none;
+  margin-right: 40px;
+}
+
+#check{
+  display: none;
+}
+
+@media (max-width: 952px) {
+  header{
+    height: 100px;
+  }
+
+  .logo img{
+    height: 75px;
+  }
+
+  .logo h1{
+    font-size: 50px;
+  }
+
+  .serviços-index{
+    font-size: small;
+  }
+
+  .serviço-descrição h3{
+    font-size: medium;
+  }
+}
+
+@media (max-width: 858px){
+
+  .logo img{
+    height: 50px;
+  }
+
+  .descrição h2{
+    display: none;
+  }
+
+  .checkbtn{
+    display: block;
+  }
+
+  ul{
+    z-index: 2;
+    position: fixed;
+    flex-direction: column;
+    width: 100%;
+    height: 50vh;
+    background-color: var(--lightGreen);
+    top: 100px;
+    right: -100%;
+    transition: all .5s;
+    text-align: center;
+    line-height: 5rem;
+  }
+
+  nav ul li{
+    display: block;
+    font-size: 30px;
+  }
+
+  #check:checked ~ ul{
+    right: 0;
+  }
+
+  .serviço-descrição h3{
+    display: none;
+  }
+}

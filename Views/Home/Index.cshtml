@@ -1,0 +1,16 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+
+
+<div class="serviços-index">
+    <div class="descrição">
+        <h1>Um <span class="destaque">spa</span> para o seu Pet!</h1>
+        <h2>A PetVet oferece o melhor atendimento para o seu bichinho. Temos ótimos serviços para garantir a beleza,
+            saúde e bem estar do seu Pet!</h2>
+        <h2><button onclick="location.href='@Url.Action("Serviços", "Home")'" class="btn btn-primary">CONHEÇA NOSSOS
+                SERVIÇOS</button>
+            ou <button onclick="location.href='@Url.Action("Contato", "Home")'" class="btn btn-warning">ENTRE EM CONTATO</button></h2>
+    </div>
+</div>

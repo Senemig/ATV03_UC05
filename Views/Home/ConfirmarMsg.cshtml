@@ -1,0 +1,29 @@
+@using Atividade3.Models
+@model Mensagem
+@{
+    ViewData["Title"] = "Contato";
+}
+
+<div class="container-mensagem">
+    <p>Olá <strong>@Model.nome</strong>!</p>
+    <p>
+        Obrigado por entrar em contato!
+    </p>
+    <p>
+        Assim que possível responderemos à sua mensagem pelo e-mail <strong>@Model.email</strong>.
+    </p>
+    @if (!string.IsNullOrEmpty(Model.telefone))
+    {
+        <p>
+            Ou pelo telefone <strong>@Model.telefone</strong>.
+        </p>
+    }
+    <p>
+        Aqui está a mensagem enviada:
+    </p>
+    <p id="mensagem">
+        <strong>@Model.mensagem</strong>
+    </p>
+
+    <button onclick="location.href='@Url.Action("Index", "Home")'" class="btn btn-primary">Voltar</button>
+</div>

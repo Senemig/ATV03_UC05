@@ -1,0 +1,45 @@
+@using Atividade3.Models
+@model Mensagem
+@{
+    ViewData["Title"] = "Contato";
+}
+
+<div class="container" style="margin-top: 30px; margin-bottom: 30px;">
+    <form asp-action="SalvarMensagem" method="POST">
+        <div class="form-row">
+            <div class="form-group col-md-4">
+                <label asp-for="nome">Nome</label>
+                <input asp-for="nome" class="form-control" placeholder="Insira seu nome..." required>
+            </div>
+            <div class="form-group col-md-4">
+                <label asp-for="email">Email</label>
+                <input asp-for="email" type="email" class="form-control" placeholder="Insira seu Email..." required>
+            </div>
+            <div class="form-group col-md-4">
+                <label asp-for="telefone">Telefone</label>
+                <input asp-for="telefone" class="form-control" placeholder="Insira seu telefone...">
+            </div>
+        </div>
+        <div class="form-row">
+            <div class="form-group col-md-4">
+                <label asp-for="tipoMensagem">Selecione o tipo de mensagem:</label>
+                <select asp-for="tipoMensagem" class="form-control">
+                    <option value="1">Dúvida</option>
+                    <option value="2">Reclamação</option>
+                    <option value="3">Elogio</option>
+                    <option value="4">Agendamento</option>
+                </select>
+            </div>
+            <div class="form-group col-md-4">
+        </div>
+        <div class="form-group col-md-4">
+            <label asp-for="animal">Nome do Pet</label>
+            <input asp-for="animal" class="form-control" placeholder="Insira o nome do seu Pet...">
+        </div>
+        </div>        
+        <div class="form-group">
+            <textarea asp-for="mensagem" class="form-control" cols="15" rows="10" required></textarea>
+        </div>
+        <input class="btn btn-primary" type="submit" value="Enviar Mensagem">
+    </form>
+</div>
