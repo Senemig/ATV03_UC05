@@ -18,6 +18,12 @@
             Ou pelo telefone <strong>@Model.telefone</strong>.
         </p>
     }
+    @if (Model.tipoMensagem == 4)
+    {
+        <p>
+            Agendamento para @Model.dataString
+        </p>
+    }
     <p>
         Aqui está a mensagem enviada:
     </p>

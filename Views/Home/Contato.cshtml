@@ -23,23 +23,42 @@
         <div class="form-row">
             <div class="form-group col-md-4">
                 <label asp-for="tipoMensagem">Selecione o tipo de mensagem:</label>
-                <select asp-for="tipoMensagem" class="form-control">
+                <select onchange="checarSelecao(this);" asp-for="tipoMensagem" class="form-control">
                     <option value="1">Dúvida</option>
                     <option value="2">Reclamação</option>
                     <option value="3">Elogio</option>
                     <option value="4">Agendamento</option>
                 </select>
             </div>
+            <div class="form-group col-md-4" id="data" style="display: none;">
+                <label asp-for="data">Data</label>
+                <input type="date" class="form-control" id="dataInput" asp-for="data">
+            </div>
             <div class="form-group col-md-4">
+                <label asp-for="animal">Nome do Pet</label>
+                <input asp-for="animal" class="form-control" placeholder="Insira o nome do seu Pet...">
+            </div>
         </div>
-        <div class="form-group col-md-4">
-            <label asp-for="animal">Nome do Pet</label>
-            <input asp-for="animal" class="form-control" placeholder="Insira o nome do seu Pet...">
-        </div>
-        </div>        
         <div class="form-group">
             <textarea asp-for="mensagem" class="form-control" cols="15" rows="10" required></textarea>
         </div>
         <input class="btn btn-primary" type="submit" value="Enviar Mensagem">
     </form>
 </div>
+
+<script>
+    function checarSelecao(selecao)
+    {
+        if(selecao.value == "4")
+        {
+            document.getElementById("data").style.display = "block";
+            document.getElementById("dataInput").setAttribute("required", "");
+        }
+        else
+        {
+            document.getElementById("data").style.display = "none";
+            document.getElementById("dataInput").removeAttribute("required");
+        }
+    }
+</script>
+

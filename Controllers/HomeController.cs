@@ -35,6 +35,7 @@ namespace Atividade3.Controllers
 
         public IActionResult SalvarMensagem(Mensagem m)
         {
+            m.dataString = m.data.ToShortDateString();
             return View("ConfirmarMsg", m);
         }
     }
